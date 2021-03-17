@@ -3,6 +3,7 @@ $default: #243f4d;
 $promo: #436372;
 $title: #191919;
 $footer: #7b7b7b;
+$bg: #fcd7b6;
 
 %dmsans-400{
   font-family: 'DMSans-Regular', sans-serif;
@@ -32,4 +33,8 @@ $footer: #7b7b7b;
 %poppins-700{
   font-family: 'Poppins-Boldr', sans-serif;
   font-weight: 700;
+}
+
+%btn{
+
 }
