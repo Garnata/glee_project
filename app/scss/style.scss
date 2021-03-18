@@ -1,9 +1,13 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 .header {
     padding: 40px 0;
+    &__container {
+        max-width: 1560px;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -11,9 +15,8 @@
     }
 }
 
-.logo
-{
-    &__img{
+.logo {
+    &__img {
         width: 140px;
     }
 }
@@ -43,12 +46,12 @@
     display: flex;
     &__link {
         position: relative;
-        &--img{
+        &--img {
             width: 17px;
             margin-top: 18px;
             text-align: center;
         }
-        &--search{
+        &--search {
             width: 50px;
             height: 50px;
             background-color: #edf1f4;
@@ -56,22 +59,22 @@
             margin-right: 18px;
             padding-left: 17px;
         }
-        &--left{
+        &--left {
             width: 90px;
             height: 50px;
-            background-color: #fcd7b6;
+            background-color: $bg;
             border-radius: 20px 0 0 20px;
             padding-left: 38px;
         }
-        &--right{
+        &--right {
             width: 90px;
             height: 50px;
-            background-color: #fcd7b6;
+            background-color: $bg;
             border-radius: 0 20px 20px 0;
             margin-left: 1px;
             padding-left: 35px;
         }
-        &--menu{
+        &--menu {
             width: 50px;
             height: 50px;
             background-color: $accent;
@@ -80,8 +83,6 @@
             padding-left: 17px;
         }
     }
-
-
     &__num {
         position: absolute;
         width: 20px;
@@ -96,5 +97,308 @@
         text-align: center;
     }
 }
+
+.footer-top {
+    padding: 80px 0 70px;
+    border-bottom: 1px solid $accent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__contact {
+        width: 200px;
+        margin-right: 100px;
+    }
+    &__nav {
+        width: 140px;
+        margin-right: 160px;
+    }
+    &__item-form {
+        max-width: 270px;
+    }
+    &__logo {
+        margin-bottom: 20px;
+        display: block;
+    }
+    &__address,
+    &__email,
+    &__phone {
+        margin-bottom: 25px;
+        display: block;
+        color: $footer;
+    }
+    &__title {
+        color: $title;
+        margin-bottom: 28px;
+        line-height: 1;
+        @extend %dmsans-700;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+    &__link {
+        margin-bottom: 14px;
+        display: block;
+        color: $footer;
+    }
+    &__text {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 24px;
+        color: $footer;
+    }
+    &__form-input {
+        height: 40px;
+        max-width: 165px;
+        background-color: #fef7f0;
+        border: none;
+        padding: 9px 10px 10px 15px;
+        &::placeholder {
+            color: $promo;
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+    &__form-btn {
+        @extend %btn;
+        border: none;
+        background-color: $accent;
+        color: #fff;
+    }
+}
+
+.footer-bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: $footer;
+    &__menu-list {
+        display: flex;
+    }
+    &__link {
+        display: inline;
+        color: $footer;
+        margin: 0 12px;
+    }
+}
+
+.top-slider {
+    &__container {
+        max-width: 1770px;
+        background-color: $bg;
+        padding-top: 98px;
+        padding-bottom: 100px;
+    }
+    &__content {
+        padding-left: 300px;
+        padding-top: 125px;
+    }
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: 470px;
+        @extend %rubik-500;
+        font-size: 72px;
+        line-height: 70px;
+        margin-bottom: 30px;
+    }
+    &__text {
+        max-width: 360px;
+        font-size: 18px;
+        color: $promo;
+        margin-bottom: 45px;
+    }
+    &__link{
+        background-color: $accent;
+        background-image: url("../images/shape.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        border-right: 12px solid $accent;
+        max-width: 188px;
+        display: block;
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        padding: 20px 25px;
+    }
+    &__img{
+        padding-right: 150px;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        li {
+            margin-top: -10px;
+            padding: 0 10px;
+            button{
+                padding: 0;
+                border: none;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0.3;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                outline-color: $bg;
+                &:nth-child(НОМЕР):before {
+                    content: '1';
+                    position: absolute;
+                    @extend %rubik-500;
+                    color: $title;
+                    font-size: 11px;
+                    line-height: 9px;
+                }
+            }
+            &.slick-active{
+                button{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.info{
+    &__container{
+        max-width: 1770px;
+        background-color: rgba(252, 215, 182, 0.2);
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 600px;
+        padding: 35px 135px 35px 230px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 155px;
+            width: 60px;
+            height: 60px;
+        }
+        &--support::before{
+            background-image: url("../images/icons/support.svg");
+            background-repeat: no-repeat;
+        }
+        &--delivery::before{
+            background-image: url("../images/icons/delivery.svg");
+            background-repeat: no-repeat;
+        }
+        &--secure::before{
+            background-image: url("../images/icons/secure.svg");
+            background-repeat: no-repeat;
+        }
+        &--delivery{
+            border-right: 1px solid $bg;
+            border-left: 1px solid $bg;
+        }
+    }
+    &__item-title{
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 40px;
+        color: #414141;
+    }
+    &__item-text{
+        @extend %dmsans-400;
+        color: #585858;
+    }
+}
+
+.title{
+    text-align: center;
+    @extend %dmsans-700;
+    color: $title;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.products,
+.design {
+    padding: 100px 0 20px;
+    &__filter-btn {
+        margin: 30px auto 75px;
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        @extend %dmsans-700;
+        color: #868686;
+        margin-left: 30px;
+        outline-color: $accent;
+    }
+    &__item-title {
+        @extend %dmsans-700;
+        color: $title;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &__item-text {
+        color: $accent;
+    }
+}
+
+.products{
+    &__items{
+        display: grid;
+        min-width: 635px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 380px);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center top;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        padding-top: 300px;
+    }
+    &__item-title,
+    &__item-text{
+        text-align: center;
+    }
+}
+
+.design{
+    &__items{
+        display: grid;
+        min-width: 635px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 270px);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+        padding-top: 40px;
+        padding-left: 35px;
+    }
+    &__item-title{
+        max-width: 180px;
+    }
+}
+
+.mixitup-control-active {
+    color: $title;
+}
+
+
+
+
+
+
+
 
 @import "media";
