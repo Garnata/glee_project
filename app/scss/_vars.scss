@@ -4,42 +4,54 @@ $promo: #436372;
 $title: #191919;
 $footer: #7b7b7b;
 $bg: #fcd7b6;
+$blog: #262626;
 
-%dmsans-400{
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
+%dmsans-400 {
+    font-family: 'DMSans-Regular', sans-serif;
+    font-weight: 400;
 }
 
-%dmsans-500{
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 500;
+%dmsans-500 {
+    font-family: 'DMSans-Medium', sans-serif;
+    font-weight: 500;
 }
 
-%dmsans-700{
-  font-family: 'DMSans-Boldr', sans-serif;
-  font-weight: 700;
+%dmsans-700 {
+    font-family: 'DMSans-Boldr', sans-serif;
+    font-weight: 700;
 }
 
-%rubik-400{
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
+%rubik-400 {
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
 }
 
-%rubik-500{
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
+%rubik-500 {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
 }
 
-%poppins-700{
-  font-family: 'Poppins-Boldr', sans-serif;
-  font-weight: 700;
+%poppins-700 {
+    font-family: 'Poppins-Boldr', sans-serif;
+    font-weight: 700;
 }
 
-%btn{
-  height: 40px;
-  padding: 7px 18px;
-  @extend %dmsans-400;
-  font-size: 14px;
-  line-height: 16px;
-  cursor: pointer;
+%btn {
+    height: 40px;
+    padding: 7px 18px;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
 }
+
+//noinspection CssInvalidFunction
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+//noinspection CssInvalidFunction
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
