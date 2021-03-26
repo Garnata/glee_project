@@ -1,9 +1,11 @@
 $accent: #a3bbc8;
+$accent-light: #edf1f4;
 $default: #243f4d;
 $promo: #436372;
 $title: #191919;
 $footer: #7b7b7b;
 $bg: #fcd7b6;
+$bg-light: #fef7f0;
 $blog: #262626;
 
 
@@ -18,7 +20,7 @@ $blog: #262626;
 }
 
 %dmsans-700 {
-    font-family: 'DMSans-Boldr', sans-serif;
+    font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;
 }
 
@@ -37,8 +39,13 @@ $blog: #262626;
     font-weight: 500;
 }
 
+%rubik-700 {
+    font-family: 'Rubik-Bold', sans-serif;
+    font-weight: 700;
+}
+
 %poppins-700 {
-    font-family: 'Poppins-Boldr', sans-serif;
+    font-family: 'Poppins-Bold', sans-serif;
     font-weight: 700;
 }
 
@@ -49,6 +56,14 @@ $blog: #262626;
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
+}
+
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
 
 //noinspection CssInvalidFunction
