@@ -58,6 +58,25 @@ $blog: #262626;
     cursor: pointer;
 }
 
+%arrow{
+    border-radius: 5px;
+    width: 184px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 28px;
+        left: 135px;
+        width: 22px;
+        height: 9px;
+    }
+}
+
 %checkbox-hidden{
     width: 1px;
     height: 1px;
