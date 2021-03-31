@@ -54,3 +54,35 @@ body {
 .header--404-page{
     background-color: #fef7f0;
 }
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 110px;
+    .pagination__list{
+        display: flex;
+    }
+    &__item{
+        padding-right: 15px;
+    }
+    &__link{
+        background-color: #fff;
+        border: 1px solid $accent;
+        padding: 15px 19px;
+        color: $default;
+    }
+    &__link--active{
+        color: #fff;
+        background-color: $accent;
+    }
+    &__next{
+        background-color: #fff;
+        border: 1px solid $accent;
+        padding: 10px 25px;
+        color: $default;
+
+    }
+}
+
+

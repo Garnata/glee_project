@@ -85,6 +85,10 @@ $blog: #262626;
     position: absolute;
 }
 
+%radio-hidden{
+    display: none;
+}
+
 //noinspection CssInvalidFunction
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
