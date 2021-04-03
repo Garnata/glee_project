@@ -499,7 +499,7 @@
     align-items: center;
 }
 
-.blog{
+.blog-slider{
     background: linear-gradient(to bottom, #fff 50%, $bg-light 50%);
     padding-top: 100px;
     &__top{
@@ -551,23 +551,28 @@
         line-height: 22px;
         color: $blog;
     }
-    &__info{
-        display: flex;
-        justify-content: flex-start;
-    }
     &__content{
         min-height: 105px;
         padding: 10px 0 5px;
         border-bottom: 1px solid $accent;
         margin-bottom: 10px;
     }
-    &__info-link{
-        font-size: 12px;
-        text-transform: uppercase;
-        color: $promo;
+    &__info{
+        display: flex;
+        justify-content: flex-start;
     }
-    &__info-link + .blog__info-link{
-        padding-left: 30px;
+    .blog-slider__info-link {
+        padding-left: 40px;
+        color: $promo;
+        @extend %info;
+        &--date::before {
+            background-image: url("../images/icons/slide-calendar.svg");
+            background-size: cover;
+        }
+        &--admin::before {
+            background-image: url("../images/icons/slide-admin.svg");
+            background-size: cover;
+        }
     }
 }
 
@@ -912,6 +917,7 @@ ol.terms__list{
     }
     &__input{
         border: 1px solid $accent-light;
+        border-radius: 5px 0 0 5px;
         height: 50px;
         padding: 0 5px 0 10px;
         width: 215px;
@@ -919,6 +925,7 @@ ol.terms__list{
     }
     &__btn{
         border: none;
+        border-radius: 0 5px 5px 0;
         background-color: $accent-light;
         height: 50px;
         width: 50px;
@@ -1035,6 +1042,7 @@ ol.terms__list{
         grid-template-columns: repeat(3, 270px);
         grid-template-rows: repeat(4, 380px);
         grid-gap: 30px;
+        padding-bottom: 100px;
     }
 }
 
@@ -1307,20 +1315,37 @@ ol.terms__list{
 .comments{
     margin-bottom: 40px;
     display: flex;
+    &__title{
+        @extend %rubik-700;
+        font-size: 24px;
+        line-height: 36px;
+        color: $promo;
+        margin-bottom: 55px;
+    }
     &__img{
         margin-right: 30px;
         min-width: 71px;
         height: 71px;
-        border-radius: 50%;
         overflow: hidden;
         object-fit: cover;
     }
     &__content-top{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__content-add{
+        font-size: 14px;
+        line-height: 18px;
+        color: $light;
     }
     &__content-name{
         margin-right: 13px;
-        @extend %rubik-500;
+        @extend %rubik-700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $promo;
     }
     &__content-date{
         padding-left: 13px;
@@ -1341,32 +1366,40 @@ ol.terms__list{
     }
     &__content-text{
         margin-bottom: 10px;
+        color: $footer;
+    }
+    &__reply{
+        margin-left: 90px;
+        padding: 30px 0;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
     }
     &__content-reply{
         display: inline-block;
-        padding-left: 25px;
         color: $promo;
         position: relative;
-        &:hover{
+        &:after{
             color: $accent;
         }
-        &::before{
+        &::after{
             content: '';
             position: absolute;
-            left: 0;
-            width: 15px;
+            left: 50px;
+            width: 12px;
             height: 13px;
-            top: 7px;
-            background-image: url("../images/icons/reply.svg");
+            top: 10px;
+            background-image: url("../images/icons/arrow-right.svg");
         }
     }
 }
 
 .comments-form{
     &__title{
-        font-size: 30px;
-        line-height: 34px;
-        margin-bottom: 30px;
+        @extend %rubik-700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $promo;
+        margin-bottom: 45px;
     }
     &__rating{
         margin-bottom: 30px;
@@ -1378,6 +1411,7 @@ ol.terms__list{
         margin-right: 25px;
     }
     &__box-input{
+        max-width: 870px;
         margin-bottom: 30px;
         display: flex;
         justify-content: space-between;
@@ -1397,20 +1431,22 @@ ol.terms__list{
         }
     }
     &__text-input{
-        width: 570px;
+        width: 400px;
         display: inline-block;
         height: 50px;
         padding: 0 20px;
         border: 1px solid $accent-light;
+        outline-color: $accent;
     }
     &__textarea{
         border: 1px solid $accent-light;
         padding: 15px 20px;
         display: block;
-        width: 100%;
+        width: 870px;
         height: 225px;
         resize: none;
         margin-bottom: 40px;
+        outline-color: $accent;
     }
     &__btn{
         height: 50px;
@@ -1492,10 +1528,192 @@ ol.terms__list{
     }
 }
 
+.blog{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        padding-bottom: 60px;
+    }
+    &__content{
+        max-width: 870px;
+    }
+    &__aside{
+        width: 270px;
+        margin-left: 30px;
+    }
+    &__item-bg{
+        max-height: 501px;
+    }
+    &__item-title{
+        font-size: 36px;
+        line-height: 26px;
+        color: $blog;
+        margin: 40px 0 35px;
+    }
+    &__item-text{
+        max-width: 800px;
+    }
+    &__item-arrow{
+        margin-top: 30px;
+        border: 1px solid $accent;
+        @extend %arrow;
+        &--shape::after{
+            background-image: url("../images/icons/right-arrow.svg");
+            background-repeat: no-repeat;
+        }
+    }
+    &__item-link{
+        position: absolute;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: $accent;
+        padding-left: 30px;
+    }
+    &__item-box{
+        max-width: 275px;
+        background-color: $accent;
+        padding: 25px 0;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        top: -80px;
+        .blog__item-info{
+            padding-left: 40px;
+            color: #fff;
+            @extend %info;
+            &--date::before{
+                background-image: url("../images/icons/calendar.svg");
+                background-size: cover;
+            }
+            &--admin::before{
+                background-image: url("../images/icons/admin.svg");
+                background-size: cover;
+            }
+        }
+    }
+}
 
+.filter-posts{
+    &__item{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__product{
+        border: 2px solid $accent-light;
+        min-width: 71px;
+        height: 71px;
+    }
+    &__content{
+        margin-left: 15px;
+        padding-bottom: 20px;
+    }
+    &__text{
+        font-size: 14px;
+        line-height: 20px;
+        color: $blog;
+    }
+    .filter-posts__info-link{
+        padding-left: 15px;
+        color: #9a9a9a;
+        @extend %info;
+        &--date::before{
+            background-image: url("../images/icons/posts-calendar.svg");
+            background-size: cover;
+            top: 1px;
+            left: 2px;
+        }
+    }
+}
+.blog-one{
+    h4{
+        font-size: 36px;
+        line-height: 26px;
+        color: $blog;
+    }
+    h6{
+        @extend %rubik-500;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 25px 0;
+    }
+    blockquote{
+        background-color: $accent-light;
+        border-left: 7px solid $accent;
+        padding: 20px 30px;
+        margin: 45px 0;
+    }
+    &__left-img{
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+    &__right-img{
+        float: right;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    &__text{
+        padding-top: 35px;
+        max-width: 820px;
+    }
+    &__author{
+        padding: 25px 0;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 65px;
+    }
+    &__left{
+        display: flex;
+    }
+    &__name,
+    &__tags,
+    &__share{
+        @extend %rubik-500;
+        font-size: 18px;
+        line-height: 25px;
+        color: $title;
+        margin-bottom: 12px;
+    }
+    &__prof{
+        color: $footer;
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__tags-link{
+        @extend %rubik-500;
+        font-size: 18px;
+        line-height: 25px;
+        color: $light;
+        margin-left: 20px;
+        text-align: center;
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__share{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        path{
+            fill: $light;
+            &:hover{
+                fill: $accent;
+            }
+        }
+        svg{
+            height: auto;
+        }
+    }
 
-
-
+}
 
 
 @import "media";

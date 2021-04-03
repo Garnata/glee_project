@@ -4,6 +4,7 @@ $default: #243f4d;
 $promo: #436372;
 $title: #191919;
 $footer: #7b7b7b;
+$light: #a1a1a1;
 $bg: #fcd7b6;
 $bg-light: #fef7f0;
 $blog: #262626;
@@ -87,6 +88,22 @@ $blog: #262626;
 
 %radio-hidden{
     display: none;
+}
+
+%info{
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 30px;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 8px;
+        left: 20px;
+        width: 10px;
+        height: 11px;
+    }
 }
 
 //noinspection CssInvalidFunction
