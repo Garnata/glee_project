@@ -1712,8 +1712,121 @@ ol.terms__list{
             height: auto;
         }
     }
-
 }
+
+#map{
+    width: 500px;
+    height: 336px;
+    margin-left: 50px;
+}
+
+.contact{
+    padding-top: 115px;
+    &__subtitle{
+        @extend %poppins-700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $accent;
+        text-align: center;
+    }
+    &__title{
+        @extend %dmsans-700;
+        color: $promo;
+        font-size: 35px;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__box-input{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text-input{
+        width: 300px;
+        height: 50px;
+        background-color: $accent-light;
+        border: none;
+        outline-color: $accent;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+
+    }
+    &__text-input + .contact__text-input{
+        margin-left: 20px;
+    }
+    &__textarea{
+        width: 100%;
+        max-width: 620px;
+        height: 175px;
+        background-color: $accent-light;
+        border: none;
+        outline-color: $accent;
+        margin-bottom: 30px;
+        padding: 15px 20px;
+    }
+    &__btn{
+        height: 50px;
+        background-color: $accent;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 30px;
+        text-transform: uppercase;
+        padding-inline: 50px;
+        cursor: pointer;
+        outline-color: $accent-light;
+        margin-left: 15px;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+        padding-bottom: 115px;
+    }
+    &__item{
+        width: 370px;
+        background-color: $accent-light;
+        padding: 65px 50px 80px;
+        cursor: pointer;
+        &:hover{
+            border: 2px solid $accent;
+        }
+    }
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 20px;
+        line-height: 26px;
+        color: $title;
+        margin: 60px 0 25px;
+    }
+    &__phone{
+        color: $default;
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__img{
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding-top: 20px;
+        margin: 0 auto;
+        box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+        path{
+            fill: $accent;
+        }
+    }
+}
+
 
 
 @import "media";
