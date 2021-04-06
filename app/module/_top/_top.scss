@@ -1,0 +1,14 @@
+.top{
+  padding: 25px 0;
+  background-color: $accent-light;
+  &__container{
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title{
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}

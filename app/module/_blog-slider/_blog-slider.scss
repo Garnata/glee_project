@@ -1,0 +1,76 @@
+.blog-slider{
+  background: linear-gradient(to bottom, #fff 50%, $bg-light 50%);
+  padding-top: 100px;
+  &__top{
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-link{
+    @extend %dmsans-700;
+    color: $blog;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 235px 28px 28px;
+    position: relative;
+    width: 370px;
+    height: 420px;
+    transition: all .3s;
+    &:hover{
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+  }
+  &__link{
+    color: #fff;
+    background-color: $accent;
+    border-radius: 20px;
+    @extend %poppins-700;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all .3s;
+    padding: 8px 28px;
+  }
+  &__link:hover{
+    background-color: #fff;
+    color: $accent;
+  }
+  &__text-link{
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $blog;
+  }
+  &__content{
+    min-height: 105px;
+    padding: 10px 0 5px;
+    border-bottom: 1px solid $accent;
+    margin-bottom: 10px;
+  }
+  &__info{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .blog-slider__info-link {
+    padding-left: 40px;
+    color: $promo;
+    @extend %info;
+    &--date::before {
+      background-image: url("../images/icons/slide-calendar.svg");
+      background-size: cover;
+    }
+    &--admin::before {
+      background-image: url("../images/icons/slide-admin.svg");
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.progress{
+    background-color: $bg;
+    &__items{
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__item{
+        text-align: center;
+    }
+    &__item-img{
+        margin: 0 auto;
+    }
+    &__item-amount{
+        @extend %dmsans-700;
+        font-size: 36px;
+        line-height: 32px;
+        margin: 20px 0;
+    }
+    &__item-text{
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}

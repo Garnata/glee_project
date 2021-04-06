@@ -1,0 +1,84 @@
+.footer-top {
+    padding: 80px 0 70px;
+    border-bottom: 1px solid $accent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__contact {
+        width: 200px;
+        margin-right: 100px;
+    }
+    &__nav {
+        width: 140px;
+        margin-right: 160px;
+    }
+    &__item-form {
+        max-width: 270px;
+    }
+    &__logo {
+        margin-bottom: 20px;
+        display: block;
+    }
+    &__address,
+    &__email,
+    &__phone {
+        margin-bottom: 25px;
+        display: block;
+        color: $footer;
+    }
+    &__title {
+        color: $title;
+        margin-bottom: 28px;
+        line-height: 1;
+        @extend %dmsans-700;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+    &__link {
+        margin-bottom: 14px;
+        display: block;
+        color: $footer;
+    }
+    &__text {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 24px;
+        color: $footer;
+    }
+    &__form-input {
+        height: 40px;
+        max-width: 165px;
+        background-color: $bg-light;
+        border: none;
+        padding: 9px 10px 10px 15px;
+        &::placeholder {
+            color: $promo;
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+    &__form-btn {
+        @extend %btn;
+        border: none;
+        background-color: $accent;
+        color: #fff;
+    }
+}
+
+.footer-bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: $footer;
+    &__menu-list {
+        display: flex;
+    }
+    &__link {
+        display: inline;
+        color: $footer;
+        margin: 0 12px;
+    }
+}

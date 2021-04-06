@@ -1,0 +1,78 @@
+.top-slider {
+  &__container {
+    max-width: 1770px;
+    background-color: $bg;
+    padding-top: 98px;
+    padding-bottom: 100px;
+  }
+  &__content {
+    padding-left: 300px;
+    padding-top: 125px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__title {
+    max-width: 470px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    max-width: 360px;
+    font-size: 18px;
+    color: $promo;
+    margin-bottom: 45px;
+  }
+  &__link{
+    background-color: $accent;
+    background-image: url("../images/shape.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    border-right: 12px solid $accent;
+    max-width: 188px;
+    display: block;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 20px 25px;
+  }
+  &__img{
+    padding-right: 150px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    li {
+      margin-top: -10px;
+      padding: 0 10px;
+      button{
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.3;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        outline-color: $bg;
+        &:nth-child(n):before {
+          content: '';
+          position: absolute;
+          @extend %rubik-500;
+          color: $title;
+          font-size: 11px;
+          line-height: 9px;
+        }
+      }
+      &.slick-active{
+        button{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

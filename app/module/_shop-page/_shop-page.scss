@@ -1,0 +1,234 @@
+.shop{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+    }
+    &__filters{
+        width: 270px;
+        margin-right: 30px;
+    }
+}
+
+.filter{
+    &__item{
+        padding-bottom: 60px;
+    }
+    &__title{
+        text-transform: uppercase;
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+}
+
+.filter-search{
+    &__form{
+        display: flex;
+    }
+    &__input{
+        border: 1px solid $accent-light;
+        border-radius: 5px 0 0 5px;
+        height: 50px;
+        padding: 0 5px 0 10px;
+        width: 215px;
+        outline-color: $accent-light;
+    }
+    &__btn{
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: $accent-light;
+        height: 50px;
+        width: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.filter-price{
+    &__label{
+        display: block;
+    }
+}
+
+.irs--flat .irs-line {
+    top: 25px;
+    height: 3px;
+    background-color: $accent-light;
+}
+
+.irs--flat .irs-bar {
+    top: 25px;
+    height: 4px;
+    background-color: $accent;
+}
+
+.irs--flat .irs-handle {
+    top: 19px;
+    width: 15px;
+    height: 15px;
+    background-color: $accent;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs {
+    position: relative;
+    display: block;
+    font-size: 14px;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+    font-size: 14px;
+    color: $promo;
+    background-color: #fff;
+    top: 40px;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before{
+    display: none;
+}
+
+.filter-category{
+    &__label{
+        padding: 1px;
+        display: block;
+        cursor: pointer;
+    }
+    &__input{
+        @extend %checkbox-hidden;
+        &:checked + .filter-brand__checkbox{
+            background-color: $accent-light;
+        }
+    }
+    &__checkbox{
+        background-color: #fff;
+        color: $default;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        border-radius: 5px;
+    }
+}
+
+.filter-brand{
+    &__label {
+        padding-bottom: 1px;
+        display: block;
+        cursor: pointer;
+    }
+    &__input {
+        @extend %checkbox-hidden;
+        &:checked + .filter-brand__checkbox{
+            background-color: $accent-light;
+            border-radius: 10px;
+        }
+    }
+    &__checkbox{
+        background-color: #fff;
+        color: $default;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+    }
+}
+
+.filter-recent{
+    &__item{
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 25px;
+    }
+    &__product{
+        border: 2px solid $accent-light;
+    }
+    &__content{
+        margin-left: 18px;
+    }
+    &__link{
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 4px;
+        margin-bottom: 8px;
+        color: $default;
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__price{
+        font-size: 15px;
+        line-height: 18px;
+        margin-top: 8px;
+    }
+}
+
+.shop-list{
+    &__inner{
+        padding-bottom: 30px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    &__product{
+        border: 2px solid $accent-light;
+    }
+    &__img{
+        image-resolution: inherit;
+    }
+    &__content{
+        max-width: 445px;
+        height: 500px;
+        margin-left: 30px;
+        padding: 90px 0 75px;
+    }
+    &__item-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 115px;
+    }
+    &__item-link{
+        background-color: #fff;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+        transition: all .3s;
+    }
+    &__item-link:hover{
+        path{
+            fill: #fff;
+        }
+        background-color: $accent;
+    }
+    &__item-title{
+        color:  $title;
+        font-size: 40px;
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+    &__item-price{
+        color:  $title;
+        font-size: 30px;
+        line-height: 34px;
+        margin: 35px 0;
+    }
+    &__item-text{
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,46 @@
+.design{
+    padding: 100px 0 120px;
+    &__filter-btn {
+        margin: 30px auto 75px;
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        background-color: transparent;
+        border: none;
+        @extend %dmsans-700;
+        color: #868686;
+        margin-left: 30px;
+        outline-color: $accent;
+    }
+    &__item-title {
+        @extend %dmsans-700;
+        color: $title;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &__item-text {
+        color: $accent;
+    }
+    &__items{
+        display: grid;
+        min-width: 635px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 270px);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+        padding-top: 40px;
+        padding-left: 35px;
+    }
+    &__item-title{
+        max-width: 180px;
+    }
+}
+
+.mixitup-control-active {
+    color: $title;
+}

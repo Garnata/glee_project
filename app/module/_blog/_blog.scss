@@ -1,0 +1,182 @@
+.blog{
+    padding: 120px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        padding-bottom: 60px;
+    }
+    &__content{
+        max-width: 870px;
+    }
+    &__aside{
+        width: 270px;
+        margin-left: 30px;
+    }
+    &__item-bg{
+        max-height: 501px;
+    }
+    &__item-title{
+        font-size: 36px;
+        line-height: 26px;
+        color: $blog;
+        margin: 40px 0 35px;
+    }
+    &__item-text{
+        max-width: 800px;
+    }
+    &__item-arrow{
+        margin-top: 30px;
+        border: 1px solid $accent;
+        @extend %arrow;
+        &--shape::after{
+            background-image: url("../images/icons/right-arrow.svg");
+            background-repeat: no-repeat;
+        }
+    }
+    &__item-link{
+        position: absolute;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: $accent;
+        padding-left: 30px;
+    }
+    &__item-box{
+        max-width: 275px;
+        background-color: $accent;
+        padding: 25px 0;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        top: -80px;
+        .blog__item-info{
+            padding-left: 40px;
+            color: #fff;
+            @extend %info;
+            &--date::before{
+                background-image: url("../images/icons/calendar.svg");
+                background-size: cover;
+            }
+            &--admin::before{
+                background-image: url("../images/icons/admin.svg");
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.filter{
+    &__item{
+        padding-bottom: 60px;
+    }
+    &__title{
+        text-transform: uppercase;
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+}
+
+.filter-search{
+    &__form{
+        display: flex;
+    }
+    &__input{
+        border: 1px solid $accent-light;
+        border-radius: 5px 0 0 5px;
+        height: 50px;
+        padding: 0 5px 0 10px;
+        width: 215px;
+        outline-color: $accent-light;
+    }
+    &__btn{
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: $accent-light;
+        height: 50px;
+        width: 50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.filter-brand{
+    &__label {
+        padding-bottom: 1px;
+        display: block;
+        cursor: pointer;
+    }
+    &__input {
+        @extend %checkbox-hidden;
+        &:checked + .filter-brand__checkbox{
+            background-color: $accent-light;
+            border-radius: 10px;
+        }
+    }
+    &__checkbox{
+        background-color: #fff;
+        color: $default;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+    }
+}
+
+.filter-category{
+    &__label{
+        padding: 1px;
+        display: block;
+        cursor: pointer;
+    }
+    &__input{
+        @extend %checkbox-hidden;
+        &:checked + .filter-brand__checkbox{
+            background-color: $accent-light;
+        }
+    }
+    &__checkbox{
+        background-color: #fff;
+        color: $default;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        border-radius: 5px;
+    }
+}
+
+.filter-posts{
+    &__item{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__product{
+        border: 2px solid $accent-light;
+        min-width: 71px;
+        height: 71px;
+    }
+    &__content{
+        margin-left: 15px;
+        padding-bottom: 20px;
+    }
+    &__text{
+        font-size: 14px;
+        line-height: 20px;
+        color: $blog;
+    }
+    .filter-posts__info-link{
+        padding-left: 15px;
+        color: #9a9a9a;
+        @extend %info;
+        &--date::before{
+            background-image: url("../images/icons/posts-calendar.svg");
+            background-size: cover;
+            top: 1px;
+            left: 2px;
+        }
+    }
+}

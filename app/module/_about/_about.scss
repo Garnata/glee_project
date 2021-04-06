@@ -1,0 +1,78 @@
+.about{
+    padding: 120px 0 120px;
+    &__inner{
+        background-image: url("../images/about-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: left bottom;
+    }
+    &__content{
+        max-width: 560px;
+        margin-left: 640px;
+        padding: 85px 0 70px;
+    }
+    &__top{
+        position: relative;
+        border-bottom: 3px solid $accent-light;
+    }
+    &__top-text{
+        margin-left: 180px;
+        margin-bottom: 45px;
+        &::before {
+            content: "12";
+            position: absolute;
+            display: block;
+            @extend %rubik-700;
+            font-size: 140px;
+            line-height: 32px;
+            color: $accent;
+            top: 18px;
+            left: 0;
+        }
+    }
+    &__link{
+        text-align: left;
+    }
+    &__text{
+        margin: 40px 0 60px;
+    }
+    &__items{
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        margin-left: 60px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -65px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__item--projects::before{
+        background-image: url("../images/icons/projects.svg");
+        background-repeat: no-repeat;
+    }
+    &__item--revenue::before{
+        background-image: url("../images/icons/revenue.svg");
+        background-repeat: no-repeat;
+    }
+    &__item--awards::before{
+        background-image: url("../images/icons/awards.svg");
+        background-repeat: no-repeat;
+    }
+    &__item-amount{
+        @extend %dmsans-700;
+        font-size: 36px;
+        line-height: 38px;
+    }
+    &__item--projects,
+    &__item--revenue{
+        padding-right: 25px;
+        border-right: 1px solid $accent-light;
+    }
+}

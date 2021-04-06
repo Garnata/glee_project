@@ -1,0 +1,80 @@
+.team{
+    padding: 120px 0 20px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content{
+        max-width: 300px;
+    }
+    &__title{
+        text-align: left;
+        margin-bottom: 35px;
+    }
+    &__text{
+        margin-bottom: 40px;
+    }
+    &__arrow {
+        background-color: $accent;
+        border: none;
+        @extend %arrow;
+        padding-left: 20px;
+        &--shape::after {
+            background-image: url("../images/shape.svg");
+            background-repeat: no-repeat;
+        }
+    }
+    &__link{
+        @extend  %poppins-700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2, 370px);
+        grid-template-rows: repeat(2, 320px);
+        grid-column-gap: 25px;
+        grid-row-gap: 105px;
+    }
+    &__item{
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+    }
+    &__item-box{
+        max-width: 320px;
+        background-color: #fff;
+        box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 265px;
+    }
+    &__item-title{
+        margin-bottom: 5px;
+        @extend %dmsans-700;
+        color: $promo;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    &__items-links{
+        position: relative;
+        display: flex;
+    }
+    &__item-link{
+        background-color: #f6f6f6;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-top: 11px;
+        padding-left: 6px;
+    }
+    &__item-link:hover {
+        background-color: $accent-light;
+    }
+}

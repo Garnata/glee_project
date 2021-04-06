@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glee</title>
+    <link rel="stylesheet" href="css/contacts.min.css">
+</head>
+
+<body>
+    {% include 'app/module/_header/_header.html' %}
+
+    <main class="main">
+        <section class="top">
+            <div class="container">
+                <h2 class="top__title title">
+                    Contact
+                </h2>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        {% include 'app/module/_contact/_contact.html' %}
+        {% include 'app/module/_blog-slider/_blog-slider.html' %}
+        {% include 'app/module/_partners/_partners.html' %}
+
+    </main>
+
+    {% include 'app/module/_footer/_footer.html' %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+            async
+    ></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 29.76367065110126, lng: -95.36824008930641 },
+                zoom: 8,
+                styles: [
+                    {
+                        "featureType": "landscape",
+                        "stylers": [
+                            {
+                                "hue": "#FFBB00"
+                            },
+                            {
+                                "saturation": 43.400000000000006
+                            },
+                            {
+                                "lightness": 37.599999999999994
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "stylers": [
+                            {
+                                "hue": "#FFC200"
+                            },
+                            {
+                                "saturation": -61.8
+                            },
+                            {
+                                "lightness": 45.599999999999994
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "stylers": [
+                            {
+                                "hue": "#FF0300"
+                            },
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 51.19999999999999
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "stylers": [
+                            {
+                                "hue": "#FF0300"
+                            },
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 52
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "stylers": [
+                            {
+                                "hue": "#0078FF"
+                            },
+                            {
+                                "saturation": -13.200000000000003
+                            },
+                            {
+                                "lightness": 2.4000000000000057
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                            {
+                                "hue": "#00FF6A"
+                            },
+                            {
+                                "saturation": -1.0989010989011234
+                            },
+                            {
+                                "lightness": 11.200000000000017
+                            },
+                            {
+                                "gamma": 1
+                            }
+                        ]
+                    }
+                ]
+            });
+        }
+    </script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

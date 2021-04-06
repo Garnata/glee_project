@@ -1,0 +1,9 @@
+.partners{
+  background-color: $bg-light;
+  padding: 88px 0;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

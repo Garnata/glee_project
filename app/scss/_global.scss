@@ -21,6 +21,14 @@ body {
     padding: 0 15px;
 }
 
+.title{
+    text-align: center;
+    @extend %dmsans-700;
+    color: $title;
+    font-size: 36px;
+    line-height: 40px;
+}
+
 .breadcrumbs{
     display: flex;
     justify-content: center;
